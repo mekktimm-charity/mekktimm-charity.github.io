@@ -96,24 +96,26 @@
             letter-spacing: 1.5px;
         }
 
-        /* ZENTRIERTER SKALIERUNGS-CONTAINER VIA ZOOM */
+        /* PERFEKT ZENTRIERTER SKALIERUNGS-CONTAINER */
         .overlay-scaler {
             width: 100%;
             display: flex;
             justify-content: center;
-            align-items: flex-start;
+            align-items: center;
             overflow: hidden;
             border-radius: 10px;
             background: #000;
-            padding: 5px 0;
+            padding: 10px 0;
         }
 
         .overlay-scaler iframe {
-            width: 980px;
+            width: 850px; /* Exakte Breite des Drimont-Widgets ohne leeren Rand rechts */
             height: 180px;
             border: none;
             pointer-events: none;
-            zoom: 0.72;
+            zoom: 0.82; /* Optimales Größenverhältnis für Desktop */
+            display: block;
+            margin: 0 auto;
         }
 
         .phase-box {
@@ -210,7 +212,7 @@
             .title-container h2 { font-size: 1.6rem; }
             .main-card { padding: 20px 15px; }
             .overlay-scaler iframe {
-                zoom: 0.42;
+                zoom: 0.42; /* Passt die Skalierung für Handys an */
             }
         }
     </style>
