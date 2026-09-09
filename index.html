@@ -109,11 +109,11 @@
         }
 
         .overlay-scaler iframe {
-            width: 850px; /* Exakte Breite des Drimont-Widgets ohne leeren Rand rechts */
+            width: 850px;
             height: 180px;
             border: none;
             pointer-events: none;
-            zoom: 0.82; /* Optimales Größenverhältnis für Desktop */
+            zoom: 0.82;
             display: block;
             margin: 0 auto;
         }
@@ -205,6 +205,23 @@
             margin-top: 25px;
             font-size: 0.8rem;
             color: #64748b;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-top: 8px;
+        }
+
+        .footer-links a {
+            color: #00d2ff;
+            text-decoration: none;
+            margin: 0 8px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: #ff0055;
+            text-decoration: underline;
         }
 
         @media (max-width: 600px) {
@@ -212,7 +229,7 @@
             .title-container h2 { font-size: 1.6rem; }
             .main-card { padding: 20px 15px; }
             .overlay-scaler iframe {
-                zoom: 0.42; /* Passt die Skalierung für Handys an */
+                zoom: 0.42;
             }
         }
     </style>
@@ -273,7 +290,11 @@
     </div>
 
     <footer>
-        &copy; 2026 MekkTimm-Charity | Darts for Kids
+        <p>&copy; 2026 MekkTimm-Charity | Darts for Kids</p>
+        <div class="footer-links">
+            <a href="impressum.html">Impressum</a> | 
+            <a href="datenschutz.html">Datenschutz</a>
+        </div>
     </footer>
 
 </body>
