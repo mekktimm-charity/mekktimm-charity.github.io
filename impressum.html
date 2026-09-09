@@ -1,132 +1,237 @@
-```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum | MekkTimm Charity</title>
+    <meta name="robots" content="index, follow">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-  <title>Impressum | MekkTimm Events</title>
-  <meta name="robots" content="index, follow">
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0b0d19;
+            background-image: 
+                radial-gradient(circle at 20% 20%, rgba(0, 183, 255, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 80% 80%, rgba(255, 0, 76, 0.15) 0%, transparent 40%);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 15px;
+        }
 
-  <link rel="stylesheet" href="style.css">
+        .main-card {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(15, 18, 37, 0.85);
+            border: 2px solid #00d2ff;
+            box-shadow: 0 0 25px rgba(0, 210, 255, 0.3), inset 0 0 15px rgba(255, 0, 100, 0.2);
+            border-radius: 20px;
+            padding: 30px 25px;
+            backdrop-filter: blur(10px);
+            position: relative;
+        }
+
+        .live-tag {
+            display: inline-block;
+            background: #ff004c;
+            color: white;
+            font-weight: bold;
+            font-size: 0.8rem;
+            padding: 4px 12px;
+            border-radius: 12px;
+            letter-spacing: 1px;
+            box-shadow: 0 0 10px #ff004c;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .title-container {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .title-container h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+            text-shadow: 0 0 10px #00d2ff, 0 0 20px #00d2ff;
+            line-height: 1.1;
+        }
+
+        /* Textinhalte für Rechtliches */
+        .legal-content {
+            text-align: left;
+            line-height: 1.6;
+            color: #cbd5e1;
+            font-size: 0.95rem;
+        }
+
+        .legal-content h2 {
+            color: #00d2ff;
+            font-size: 1.2rem;
+            margin-top: 25px;
+            margin-bottom: 8px;
+            border-bottom: 1px solid rgba(0, 210, 255, 0.2);
+            padding-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .legal-content p {
+            margin-bottom: 15px;
+        }
+
+        .legal-content a {
+            color: #00ffcc;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .legal-content a:hover {
+            color: #ff0055;
+            text-decoration: underline;
+        }
+
+        /* Action Buttons */
+        .legal-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-action {
+            flex: 1;
+            min-width: 200px;
+            padding: 12px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid #00d2ff;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 210, 255, 0.2);
+            transition: all 0.2s ease;
+            font-size: 0.9rem;
+        }
+
+        .btn-action:hover {
+            background: linear-gradient(135deg, #ff0055 0%, #00d2ff 100%);
+            border-color: transparent;
+            box-shadow: 0 0 20px rgba(255, 0, 85, 0.5);
+            transform: translateY(-2px);
+        }
+
+        footer {
+            margin-top: 25px;
+            font-size: 0.8rem;
+            color: #64748b;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .title-container h1 { font-size: 2rem; }
+            .main-card { padding: 20px 15px; }
+            .legal-actions { flex-direction: column; }
+            .btn-action { width: 100%; }
+        }
+    </style>
 </head>
+<body>
 
-<body class="legal-page">
+    <main class="main-card">
+        <div style="text-align: center;">
+            <span class="live-tag">Rechtliches</span>
+        </div>
+        
+        <div class="title-container">
+            <h1>Impressum</h1>
+        </div>
 
-  <header class="legal-header">
-    <a class="brand" href="index.html">
-      🔥 MekkTimm Events
-    </a>
-  </header>
+        <div class="legal-content">
 
-  <main class="legal-main">
+            <h2>Angaben gemäß § 5 DDG</h2>
+            <p>
+                Hagen Steinbeck<br>
+                Einzelunternehmer<br>
+                August-Bebel-Str. 31b<br>
+                01904 Neukirch/Lausitz<br>
+                Deutschland
+            </p>
 
-    <section class="legal-card">
+            <h2>Kontakt</h2>
+            <p>
+                E-Mail: 
+                <a href="mailto:mekktimm@gmail.com">mekktimm@gmail.com</a>
+            </p>
 
-      <div class="section-title">
-        <span>Rechtliches</span>
-        <h1>Impressum</h1>
-      </div>
+            <h2>Verantwortlich für den Inhalt</h2>
+            <p>
+                Hagen Steinbeck<br>
+                August-Bebel-Str. 31b<br>
+                01904 Neukirch/Lausitz
+            </p>
 
-      <div class="legal-content">
+            <h2>Hinweis zu Partnern und Sponsoren</h2>
+            <p>
+                Die MekkTimm-Projekte werden teilweise durch Partner und Sponsoren unterstützt. 
+                Produktplatzierungen, Gewinnspiele, Rabattaktionen und sonstige kommerzielle Kooperationen werden 
+                transparent kommuniziert und entsprechend gekennzeichnet.
+            </p>
 
-        <h2>Angaben gemäß § 5 DDG</h2>
+            <h2>Haftung für Inhalte</h2>
+            <p>
+                Als Diensteanbieter sind wir für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. 
+                Eine Verpflichtung zur Überwachung übermittelter oder gespeicherter fremder Informationen besteht jedoch nur im 
+                Rahmen der gesetzlichen Bestimmungen.
+            </p>
 
-        <p>
-          Hagen Steinbeck<br>
-          Einzelunternehmer<br>
-          August-Bebel-Str. 31b<br>
-          01904 Neukirch/Lausitz<br>
-          Deutschland
-        </p>
+            <h2>Haftung für Links</h2>
+            <p>
+                Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. 
+                Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich.
+            </p>
+            <p>
+                Zum Zeitpunkt der Verlinkung waren keine rechtswidrigen Inhalte erkennbar. Eine dauerhafte Kontrolle externer Links ist ohne 
+                konkrete Anhaltspunkte für eine Rechtsverletzung nicht zumutbar. Bei Bekanntwerden entsprechender Rechtsverletzungen werden wir 
+                betroffene Links entfernen.
+            </p>
 
-        <h2>Kontakt</h2>
+            <h2>Urheberrecht</h2>
+            <p>
+                Die auf dieser Website erstellten Inhalte, Grafiken, Videos und sonstigen Werke unterliegen dem deutschen Urheberrecht, 
+                soweit nicht ausdrücklich etwas anderes angegeben ist.
+            </p>
+            <p>
+                Vervielfältigung, Bearbeitung, Verbreitung oder sonstige Verwertung außerhalb der gesetzlichen Grenzen bedürfen der 
+                vorherigen Zustimmung des jeweiligen Rechteinhabers.
+            </p>
 
-        <p>
-          E-Mail:
-          <a href="mailto:mekktimm@gmail.com">
-            mekktimm@gmail.com
-          </a>
-        </p>
+        </div>
 
-        <h2>Verantwortlich für den Inhalt</h2>
+        <div class="legal-actions">
+            <a class="btn-action" href="index.html">← Zurück zur Startseite</a>
+            <a class="btn-action" href="datenschutz.html">Datenschutz</a>
+        </div>
+    </main>
 
-        <p>
-          Hagen Steinbeck<br>
-          August-Bebel-Str. 31b<br>
-          01904 Neukirch/Lausitz
-        </p>
-
-        <h2>Hinweis zu Partnern und Sponsoren</h2>
-
-        <p>
-          Die MekkTimm BBQ Bash wird teilweise durch Partner und
-          Sponsoren unterstützt. Produktplatzierungen, Gewinnspiele,
-          Rabattaktionen und sonstige kommerzielle Kooperationen werden
-          transparent kommuniziert und entsprechend gekennzeichnet.
-        </p>
-
-        <h2>Haftung für Inhalte</h2>
-
-        <p>
-          Als Diensteanbieter sind wir für eigene Inhalte auf diesen
-          Seiten nach den allgemeinen Gesetzen verantwortlich.
-          Eine Verpflichtung zur Überwachung übermittelter oder
-          gespeicherter fremder Informationen besteht jedoch nur im
-          Rahmen der gesetzlichen Bestimmungen.
-        </p>
-
-        <h2>Haftung für Links</h2>
-
-        <p>
-          Diese Website enthält Links zu externen Websites Dritter,
-          auf deren Inhalte wir keinen Einfluss haben. Für die Inhalte
-          der verlinkten Seiten ist stets der jeweilige Anbieter oder
-          Betreiber verantwortlich.
-        </p>
-
-        <p>
-          Zum Zeitpunkt der Verlinkung waren keine rechtswidrigen Inhalte
-          erkennbar. Eine dauerhafte Kontrolle externer Links ist ohne
-          konkrete Anhaltspunkte für eine Rechtsverletzung nicht zumutbar.
-          Bei Bekanntwerden entsprechender Rechtsverletzungen werden wir
-          betroffene Links entfernen.
-        </p>
-
-        <h2>Urheberrecht</h2>
-
-        <p>
-          Die auf dieser Website erstellten Inhalte, Grafiken, Videos und
-          sonstigen Werke unterliegen dem deutschen Urheberrecht, soweit
-          nicht ausdrücklich etwas anderes angegeben ist.
-        </p>
-
-        <p>
-          Vervielfältigung, Bearbeitung, Verbreitung oder sonstige
-          Verwertung außerhalb der gesetzlichen Grenzen bedürfen der
-          vorherigen Zustimmung des jeweiligen Rechteinhabers.
-        </p>
-
-      </div>
-
-      <div class="legal-actions">
-        <a class="legal-button" href="index.html">
-          ← Zurück zur Startseite
-        </a>
-
-        <a class="legal-button" href="datenschutz.html">
-          Datenschutz
-        </a>
-      </div>
-
-    </section>
-
-  </main>
-
-  <footer class="legal-footer">
-    © 2026 MekkTimm Events
-  </footer>
+    <footer>
+        &copy; 2026 MekkTimm-Charity | Darts for Kids
+    </footer>
 
 </body>
 </html>
-```
