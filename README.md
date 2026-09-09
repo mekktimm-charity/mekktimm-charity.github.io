@@ -1,1 +1,1 @@
-# mekktimm-chartiy.github.io
+# mekktimm-charity.github.io
