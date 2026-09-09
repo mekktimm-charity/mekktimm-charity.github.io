@@ -1,323 +1,345 @@
-```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutz | MekkTimm Charity</title>
+    <meta name="robots" content="index, follow">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-  <title>Datenschutz | MekkTimm Events</title>
-  <meta name="robots" content="index, follow">
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0b0d19;
+            background-image: 
+                radial-gradient(circle at 20% 20%, rgba(0, 183, 255, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 80% 80%, rgba(255, 0, 76, 0.15) 0%, transparent 40%);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 15px;
+        }
 
-  <link rel="stylesheet" href="style.css">
+        .main-card {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(15, 18, 37, 0.85);
+            border: 2px solid #00d2ff;
+            box-shadow: 0 0 25px rgba(0, 210, 255, 0.3), inset 0 0 15px rgba(255, 0, 100, 0.2);
+            border-radius: 20px;
+            padding: 30px 25px;
+            backdrop-filter: blur(10px);
+            position: relative;
+        }
+
+        .live-tag {
+            display: inline-block;
+            background: #ff004c;
+            color: white;
+            font-weight: bold;
+            font-size: 0.8rem;
+            padding: 4px 12px;
+            border-radius: 12px;
+            letter-spacing: 1px;
+            box-shadow: 0 0 10px #ff004c;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .title-container {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .title-container h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+            text-shadow: 0 0 10px #00d2ff, 0 0 20px #00d2ff;
+            line-height: 1.1;
+        }
+
+        /* Textinhalte für Rechtliches */
+        .legal-content {
+            text-align: left;
+            line-height: 1.6;
+            color: #cbd5e1;
+            font-size: 0.95rem;
+        }
+
+        .legal-content h2 {
+            color: #00d2ff;
+            font-size: 1.2rem;
+            margin-top: 25px;
+            margin-bottom: 8px;
+            border-bottom: 1px solid rgba(0, 210, 255, 0.2);
+            padding-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .legal-content p {
+            margin-bottom: 15px;
+        }
+
+        .legal-content ul {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+
+        .legal-content li {
+            margin-bottom: 6px;
+        }
+
+        .legal-content code {
+            background: rgba(0, 210, 255, 0.15);
+            color: #00d2ff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+
+        .legal-content a {
+            color: #00ffcc;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .legal-content a:hover {
+            color: #ff0055;
+            text-decoration: underline;
+        }
+
+        /* Action Buttons */
+        .legal-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-action {
+            flex: 1;
+            min-width: 200px;
+            padding: 12px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid #00d2ff;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 210, 255, 0.2);
+            transition: all 0.2s ease;
+            font-size: 0.9rem;
+        }
+
+        .btn-action:hover {
+            background: linear-gradient(135deg, #ff0055 0%, #00d2ff 100%);
+            border-color: transparent;
+            box-shadow: 0 0 20px rgba(255, 0, 85, 0.5);
+            transform: translateY(-2px);
+        }
+
+        footer {
+            margin-top: 25px;
+            font-size: 0.8rem;
+            color: #64748b;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .title-container h1 { font-size: 2rem; }
+            .main-card { padding: 20px 15px; }
+            .legal-actions { flex-direction: column; }
+            .btn-action { width: 100%; }
+        }
+    </style>
 </head>
+<body>
 
-<body class="legal-page">
+    <main class="main-card">
+        <div style="text-align: center;">
+            <span class="live-tag">Rechtliches</span>
+        </div>
+        
+        <div class="title-container">
+            <h1>Datenschutz</h1>
+        </div>
 
-  <header class="legal-header">
-    <a class="brand" href="index.html">
-      🔥 MekkTimm Events
-    </a>
-  </header>
+        <div class="legal-content">
 
-  <main class="legal-main">
+            <h2>1. Verantwortlicher</h2>
+            <p>
+                Verantwortlich für die Verarbeitung personenbezogener Daten auf dieser Website ist:
+            </p>
+            <p>
+                Hagen Steinbeck<br>
+                August-Bebel-Str. 31b<br>
+                01904 Neukirch/Lausitz<br>
+                Deutschland
+            </p>
+            <p>
+                E-Mail: <a href="mailto:mekktimm@gmail.com">mekktimm@gmail.com</a>
+            </p>
 
-    <section class="legal-card">
+            <h2>2. Allgemeine Hinweise</h2>
+            <p>
+                Personenbezogene Daten sind alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen. 
+                Dazu können insbesondere IP-Adressen, Kontaktdaten und Kommunikationsinhalte gehören.
+            </p>
+            <p>
+                Wir verarbeiten personenbezogene Daten nur, soweit dies für den Betrieb dieser Website, die Kommunikation mit Interessierten 
+                oder die Durchführung der MekkTimm-Projekte erforderlich ist oder eine entsprechende gesetzliche Grundlage besteht.
+            </p>
 
-      <div class="section-title">
-        <span>Rechtliches</span>
-        <h1>Datenschutz</h1>
-      </div>
+            <h2>3. Hosting über GitHub Pages</h2>
+            <p>
+                Diese Website wird über GitHub Pages bereitgestellt. Anbieter ist:
+            </p>
+            <p>
+                GitHub, Inc.<br>
+                88 Colin P. Kelly Jr. Street<br>
+                San Francisco, CA 94107<br>
+                USA
+            </p>
+            <p>
+                Beim Aufruf dieser Website werden technisch notwendige Verbindungsdaten verarbeitet. Dazu können insbesondere die IP-Adresse, 
+                Datum und Uhrzeit des Zugriffs, aufgerufene Dateien, Browsertyp, Betriebssystem sowie Referrer-Informationen gehören.
+            </p>
+            <p>
+                GitHub weist darauf hin, dass beim Besuch einer GitHub-Pages-Website die IP-Adresse der Besucher zu Sicherheitszwecken protokolliert und gespeichert wird.
+            </p>
+            <p>
+                Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse besteht in der sicheren, 
+                zuverlässigen und wirtschaftlichen Bereitstellung dieser Website.
+            </p>
+            <p>
+                Weitere Informationen: 
+                <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">
+                    Datenschutzhinweise von GitHub
+                </a>
+            </p>
 
-      <div class="legal-content">
+            <h2>4. Abruf des Community-Counters</h2>
+            <p>
+                Zur Anzeige des aktuellen Community-Counters ruft diese Website ein Overlay/Daten von folgendem Server ab:
+            </p>
+            <p>
+                <code>https://drimont.com/bbq/overlay.html</code>
+            </p>
+            <p>
+                Beim Abruf stellt der Browser des Besuchers eine direkte Verbindung zu diesem Server her. Dabei können technisch notwendige Connectionsdaten 
+                wie IP-Adresse, Zeitpunkt des Abrufs, Browserinformationen und die aufgerufene Adresse verarbeitet und in Server-Logdateien gespeichert werden.
+            </p>
+            <p>
+                Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse besteht in der aktuellen und 
+                einheitlichen Darstellung des Community-Fortschritts auf der Landingpage und im Livestream.
+            </p>
 
-        <h2>1. Verantwortlicher</h2>
+            <h2>5. Lokal eingebundene Medien</h2>
+            <p>
+                Bilder, Logos, CSS-Dateien und JavaScript-Dateien werden grundsätzlich direkt über diese Website bereitgestellt. 
+                Beim Laden dieser Dateien findet keine zusätzliche Verbindung zu externen Video-, Schriftarten- oder Analysediensten statt.
+            </p>
 
-        <p>
-          Verantwortlich für die Verarbeitung personenbezogener Daten
-          auf dieser Website ist:
-        </p>
+            <h2>6. Kontaktaufnahme per E-Mail</h2>
+            <p>
+                Wenn Sie uns per E-Mail kontaktieren, verarbeiten wir die von Ihnen übermittelten Daten, insbesondere Ihre E-Mail-Adresse, 
+                Ihren Namen und den Inhalt Ihrer Nachricht.
+            </p>
+            <p>
+                Die Verarbeitung erfolgt zur Bearbeitung Ihrer Anfrage. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, soweit die Anfrage auf 
+                die Anbahnung oder Durchführung eines Vertrages gerichtet ist. In allen anderen Fällen erfolgt die Verarbeitung auf Grundlage von 
+                Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse besteht in der sachgerechten Bearbeitung eingehender Anfragen.
+            </p>
+            <p>
+                Die Daten werden gelöscht, sobald die Anfrage abschließend bearbeitet wurde und keine gesetzlichen Aufbewahrungspflichten bestehen.
+            </p>
 
-        <p>
-          Hagen Steinbeck<br>
-          August-Bebel-Str. 31b<br>
-          01904 Neukirch/Lausitz<br>
-          Deutschland
-        </p>
+            <h2>7. Links zu sozialen Netzwerken und Drittanbietern</h2>
+            <p>
+                Diese Website enthält Links zu externen Angeboten, insbesondere zu Twitch, Instagram, Partnern, Sponsoren sowie den eingesetzten Support-Plattformen.
+            </p>
+            <p>
+                Es handelt sich um normale Links. Eine Verbindung zum jeweiligen Drittanbieter wird grundsätzlich erst hergestellt, wenn Sie den entsprechenden Link anklicken.
+            </p>
+            <p>
+                Ab diesem Zeitpunkt gelten die Datenschutzbestimmungen des jeweiligen Anbieters. Wir haben keinen Einfluss darauf, welche Daten diese Drittanbieter verarbeiten.
+            </p>
 
-        <p>
-          E-Mail:
-          <a href="mailto:mekktimm@gmail.com">
-            mekktimm@gmail.com
-          </a>
-        </p>
+            <h2>8. Partner- und Sponsorenlinks</h2>
+            <p>
+                Partner- und Sponsorenbereiche können Logos, Namen, Links, Produktinformationen, Rabattcodes und Informationen über die jeweilige Unterstützung enthalten.
+            </p>
+            <p>
+                Beim Anklicken eines Partner- oder Sponsorenlinks verlassen Sie diese Website und werden zum Angebot des jeweiligen Unternehmens weitergeleitet.
+            </p>
 
-        <h2>2. Allgemeine Hinweise</h2>
+            <h2>9. Cookies und Tracking</h2>
+            <p>
+                Diese Website setzt derzeit keine eigenen Analyse-, Marketing- oder Trackingcookies ein. Es werden keine Analysewerkzeuge wie Google Analytics, 
+                Meta Pixel oder vergleichbare Dienste genutzt.
+            </p>
 
-        <p>
-          Personenbezogene Daten sind alle Informationen, die sich auf
-          eine identifizierte oder identifizierbare natürliche Person
-          beziehen. Dazu können insbesondere IP-Adressen, Kontaktdaten
-          und Kommunikationsinhalte gehören.
-        </p>
+            <h2>10. Speicherdauer</h2>
+            <p>
+                Personenbezogene Daten werden nur so lange gespeichert, wie dies für den jeweiligen Zweck erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen.
+            </p>
 
-        <p>
-          Wir verarbeiten personenbezogene Daten nur, soweit dies für den
-          Betrieb dieser Website, die Kommunikation mit Interessierten
-          oder die Durchführung der MekkTimm BBQ Bash erforderlich ist
-          oder eine entsprechende gesetzliche Grundlage besteht.
-        </p>
+            <h2>11. Ihre Rechte</h2>
+            <p>
+                Sie haben im Rahmen der gesetzlichen Voraussetzungen insbesondere folgende Rechte:
+            </p>
+            <ul>
+                <li>Recht auf Auskunft nach Art. 15 DSGVO</li>
+                <li>Recht auf Berichtigung nach Art. 16 DSGVO</li>
+                <li>Recht auf Löschung nach Art. 17 DSGVO</li>
+                <li>Recht auf Einschränkung der Verarbeitung nach Art. 18 DSGVO</li>
+                <li>Recht auf Datenübertragbarkeit nach Art. 20 DSGVO</li>
+                <li>Widerspruchsrecht nach Art. 21 DSGVO</li>
+                <li>Recht auf Widerruf einer erteilten Einwilligung mit Wirkung für die Zukunft</li>
+            </ul>
+            <p>
+                Zur Ausübung Ihrer Rechte genügt eine Nachricht an: <a href="mailto:mekktimm@gmail.com">mekktimm@gmail.com</a>
+            </p>
 
-        <h2>3. Hosting über GitHub Pages</h2>
+            <h2>12. Beschwerderecht</h2>
+            <p>
+                Sie haben das Recht, sich bei einer zuständigen Datenschutzaufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten zu beschweren.
+            </p>
 
-        <p>
-          Diese Website wird über GitHub Pages bereitgestellt.
-          Anbieter ist:
-        </p>
+            <h2>13. Aktualität dieser Datenschutzerklärung</h2>
+            <p>
+                Diese Datenschutzerklärung wird angepasst, wenn sich die eingesetzten Dienste, technischen Funktionen oder gesetzlichen Anforderungen ändern.
+            </p>
+            <p style="margin-top: 10px; font-weight: bold; color: #00d2ff;">
+                Stand: Juli 2026
+            </p>
 
-        <p>
-          GitHub, Inc.<br>
-          88 Colin P. Kelly Jr. Street<br>
-          San Francisco, CA 94107<br>
-          USA
-        </p>
+        </div>
 
-        <p>
-          Beim Aufruf dieser Website werden technisch notwendige
-          Verbindungsdaten verarbeitet. Dazu können insbesondere die
-          IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Dateien,
-          Browsertyp, Betriebssystem sowie Referrer-Informationen gehören.
-        </p>
+        <div class="legal-actions">
+            <a class="btn-action" href="index.html">← Zurück zur Startseite</a>
+            <a class="btn-action" href="impressum.html">Impressum</a>
+        </div>
+    </main>
 
-        <p>
-          GitHub weist darauf hin, dass beim Besuch einer GitHub-Pages-
-          Website die IP-Adresse der Besucher zu Sicherheitszwecken
-          protokolliert und gespeichert wird.
-        </p>
-
-        <p>
-          Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1
-          lit. f DSGVO. Unser berechtigtes Interesse besteht in der
-          sicheren, zuverlässigen und wirtschaftlichen Bereitstellung
-          dieser Website.
-        </p>
-
-        <p>
-          Weitere Informationen:
-          <a
-            href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Datenschutzhinweise von GitHub
-          </a>
-        </p>
-
-        <h2>4. Abruf des Community-Counters</h2>
-
-        <p>
-          Zur Anzeige des aktuellen Community-Counters ruft diese Website
-          eine JSON-Datei von folgendem Server ab:
-        </p>
-
-        <p>
-          <code>https://drimont.com/bbq/status.json</code>
-        </p>
-
-        <p>
-          Beim Abruf stellt der Browser des Besuchers eine direkte
-          Verbindung zu diesem Server her. Dabei können technisch
-          notwendige Verbindungsdaten wie IP-Adresse, Zeitpunkt des
-          Abrufs, Browserinformationen und die aufgerufene Adresse
-          verarbeitet und in Server-Logdateien gespeichert werden.
-        </p>
-
-        <p>
-          Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1
-          lit. f DSGVO. Unser berechtigtes Interesse besteht in der
-          aktuellen und einheitlichen Darstellung des
-          Community-Fortschritts auf der Landingpage und im Livestream.
-        </p>
-
-        <h2>5. Lokal eingebundene Medien</h2>
-
-        <p>
-          Bilder, Logos, Videos, CSS-Dateien und JavaScript-Dateien werden
-          grundsätzlich direkt über diese Website bereitgestellt.
-          Beim Laden dieser Dateien findet keine zusätzliche Verbindung
-          zu externen Video-, Schriftarten- oder Analysediensten statt.
-        </p>
-
-        <p>
-          Videos werden erst nach einer entsprechenden Nutzerinteraktion
-          mit Ton abgespielt. Automatisch abgespielte Hintergrundvideos
-          werden ohne Ton wiedergegeben.
-        </p>
-
-        <h2>6. Kontaktaufnahme per E-Mail</h2>
-
-        <p>
-          Wenn Sie uns per E-Mail kontaktieren, verarbeiten wir die von
-          Ihnen übermittelten Daten, insbesondere Ihre E-Mail-Adresse,
-          Ihren Namen und den Inhalt Ihrer Nachricht.
-        </p>
-
-        <p>
-          Die Verarbeitung erfolgt zur Bearbeitung Ihrer Anfrage.
-          Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, soweit die
-          Anfrage auf die Anbahnung oder Durchführung eines Vertrages
-          gerichtet ist. In allen anderen Fällen erfolgt die Verarbeitung
-          auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes
-          Interesse besteht in der sachgerechten Bearbeitung eingehender
-          Anfragen.
-        </p>
-
-        <p>
-          Die Daten werden gelöscht, sobald die Anfrage abschließend
-          bearbeitet wurde und keine gesetzlichen Aufbewahrungspflichten
-          oder sonstigen berechtigten Gründe für eine weitere Speicherung
-          bestehen.
-        </p>
-
-        <h2>7. Links zu sozialen Netzwerken und Drittanbietern</h2>
-
-        <p>
-          Diese Website enthält Links zu externen Angeboten, insbesondere
-          zu Twitch, Instagram, Partnern, Sponsoren sowie den eingesetzten
-          Support-Plattformen.
-        </p>
-
-        <p>
-          Es handelt sich um normale Links. Eine Verbindung zum jeweiligen
-          Drittanbieter wird grundsätzlich erst hergestellt, wenn Sie den
-          entsprechenden Link anklicken.
-        </p>
-
-        <p>
-          Ab diesem Zeitpunkt gelten die Datenschutzbestimmungen des
-          jeweiligen Anbieters. Wir haben keinen Einfluss darauf, welche
-          Daten diese Drittanbieter verarbeiten.
-        </p>
-
-        <h2>8. Partner- und Sponsorenlinks</h2>
-
-        <p>
-          Partner- und Sponsorenbereiche können Logos, Namen, Links,
-          Produktinformationen, Rabattcodes und Informationen über die
-          jeweilige Unterstützung enthalten.
-        </p>
-
-        <p>
-          Beim Anklicken eines Partner- oder Sponsorenlinks verlassen Sie
-          diese Website und werden zum Angebot des jeweiligen Unternehmens
-          weitergeleitet.
-        </p>
-
-        <h2>9. Cookies und Tracking</h2>
-
-        <p>
-          Diese Website setzt derzeit keine eigenen Analyse-, Marketing-
-          oder Trackingcookies ein. Es werden keine Analysewerkzeuge wie
-          Google Analytics, Meta Pixel oder vergleichbare Dienste genutzt.
-        </p>
-
-        <p>
-          Aus diesem Grund wird derzeit kein Einwilligungsbanner für
-          Analyse- oder Marketingtechnologien eingesetzt.
-        </p>
-
-        <p>
-          Sollten zukünftig zusätzliche Drittanbieterinhalte,
-          Trackingwerkzeuge oder einwilligungspflichtige Technologien
-          eingebunden werden, wird diese Datenschutzerklärung entsprechend
-          angepasst und erforderlichenfalls eine Einwilligung eingeholt.
-        </p>
-
-        <h2>10. Speicherdauer</h2>
-
-        <p>
-          Personenbezogene Daten werden nur so lange gespeichert, wie dies
-          für den jeweiligen Zweck erforderlich ist oder gesetzliche
-          Aufbewahrungspflichten bestehen.
-        </p>
-
-        <p>
-          Die konkrete Speicherdauer technischer Serverdaten wird im
-          Übrigen durch die eingesetzten Hostinganbieter festgelegt.
-        </p>
-
-        <h2>11. Ihre Rechte</h2>
-
-        <p>
-          Sie haben im Rahmen der gesetzlichen Voraussetzungen
-          insbesondere folgende Rechte:
-        </p>
-
-        <ul>
-          <li>Recht auf Auskunft nach Art. 15 DSGVO</li>
-          <li>Recht auf Berichtigung nach Art. 16 DSGVO</li>
-          <li>Recht auf Löschung nach Art. 17 DSGVO</li>
-          <li>Recht auf Einschränkung der Verarbeitung nach Art. 18 DSGVO</li>
-          <li>Recht auf Datenübertragbarkeit nach Art. 20 DSGVO</li>
-          <li>Widerspruchsrecht nach Art. 21 DSGVO</li>
-          <li>
-            Recht auf Widerruf einer erteilten Einwilligung mit Wirkung
-            für die Zukunft
-          </li>
-        </ul>
-
-        <p>
-          Zur Ausübung Ihrer Rechte genügt eine Nachricht an:
-          <a href="mailto:mekktimm@gmail.com">
-            mekktimm@gmail.com
-          </a>
-        </p>
-
-        <h2>12. Beschwerderecht</h2>
-
-        <p>
-          Sie haben das Recht, sich bei einer zuständigen
-          Datenschutzaufsichtsbehörde über die Verarbeitung Ihrer
-          personenbezogenen Daten zu beschweren.
-        </p>
-
-        <p>
-          Zuständig kann insbesondere die Datenschutzaufsichtsbehörde
-          Ihres Wohnortes, Ihres Arbeitsplatzes oder des Ortes des
-          mutmaßlichen Verstoßes sein.
-        </p>
-
-        <h2>13. Aktualität dieser Datenschutzerklärung</h2>
-
-        <p>
-          Diese Datenschutzerklärung wird angepasst, wenn sich die
-          eingesetzten Dienste, technischen Funktionen oder gesetzlichen
-          Anforderungen ändern.
-        </p>
-
-        <p>
-          Stand: Juli 2026
-        </p>
-
-      </div>
-
-      <div class="legal-actions">
-        <a class="legal-button" href="index.html">
-          ← Zurück zur Startseite
-        </a>
-
-        <a class="legal-button" href="impressum.html">
-          Impressum
-        </a>
-      </div>
-
-    </section>
-
-  </main>
-
-  <footer class="legal-footer">
-    © 2026 MekkTimm Events
-  </footer>
+    <footer>
+        &copy; 2026 MekkTimm-Charity | Darts for Kids
+    </footer>
 
 </body>
 </html>
-```
